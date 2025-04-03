@@ -11,18 +11,14 @@ function print(text) {
  */
 function isValid(name) {
 
-  if (name && name.length !== 0 && name.split(' ').length - 1 <= 0 && name.length >= 4 && name !== null) {
-    return true;
-  } else {
-    return false;
-  }
+  return Boolean(name) && !name.includes(' ') && name.length >= 4;
 
 }
 
 
 function sayHello() {
-  let userName = prompt('Введите ваше имя');
-
+  //let userName = prompt('Введите ваше имя');
+let userName = "Vasia"
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
   } else {

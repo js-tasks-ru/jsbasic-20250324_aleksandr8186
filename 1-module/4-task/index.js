@@ -6,9 +6,6 @@ function checkSpam(str) {
   let spam1 = str.toLowerCase().includes(searchItem1.toLowerCase());
   let spam2 = str.toLowerCase().includes(searchItem2.toLowerCase());
 
-  if (spam1 || spam2) {
-    return true;
-  } else {
-    return false;
-  }
+  return spam1 || spam2
+
 }
